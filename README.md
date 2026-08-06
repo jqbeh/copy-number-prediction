@@ -4,8 +4,8 @@ Python script to predict gene copy number in prokaryotic genome.
 Set up a conda environment with the following dependencies installed.
 
 ## Dependencies:
-- bedtools version >=2.31.1
-- bwa version >=0.7.19
+- bedtools >=2.31.1
+- bwa >=0.7.19
 - samtools >=1.23
 
 ## Usage
