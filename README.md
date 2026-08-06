@@ -9,7 +9,8 @@ Set up a conda environment with the following dependencies installed.
 - samtools >=1.23
 
 ## Usage
-python combined_run.py \
+```
+% python combined_run.py \
     -f sample.fa \
     -1 sample_R1.fastq.gz \
     -2 sample_R2.fastq.gz \
@@ -18,13 +19,12 @@ python combined_run.py \
     -q <query_gene_name> \
     -s <subject_gene_name>
 
-## Parameters
-```
-  ### -f <sample.fa> your genome assembly FASTA
-  ### -1 <sample_R1.fastq.gz> read R1
-  ### -2 <sample_R2.fastq.gz> read R2
-  ### -g <sample.gff> annotation file from Prokka
-  ### -o <sample.tsv> name of output file
-  ### -q <gene name> Query gene, usually single-copy gene to use as baseline
-  ### -s <gene name> Subject gene, to calculate copy number
+OPTIONS:
+  -f <sample.fa> your genome assembly FASTA
+  -1 <sample_R1.fastq.gz> read R1
+  -2 <sample_R2.fastq.gz> read R2
+  -g <sample.gff> annotation file from Prokka
+  -o <sample.tsv> name of output file
+  -q <gene name> Query gene, usually single-copy gene to use as baseline
+  -s <gene name> Subject gene, to calculate copy number
 ```
