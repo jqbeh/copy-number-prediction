@@ -10,7 +10,7 @@ Set up a conda environment with the following dependencies installed.
 
 ## Usage
 ```
-% python combined_run.py \
+% python copy_number.py \
     -f sample.fa \
     -1 sample_R1.fastq.gz \
     -2 sample_R2.fastq.gz \
