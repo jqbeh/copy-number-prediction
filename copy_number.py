@@ -3,7 +3,7 @@
 """
 Usage:
 
-python gene_copy_number.py \
+python copy_number.py \
     -f sample.fa \
     -1 sample_R1.fastq.gz \
     -2 sample_R2.fastq.gz \
