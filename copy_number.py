@@ -20,10 +20,7 @@ Dependencies:
     bwa
     samtools
     bedtools
-
-conda activate everything
 """
-
 
 import argparse
 import csv
