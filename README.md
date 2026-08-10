@@ -14,7 +14,6 @@ The tool takes the following as input:
 - your Illumina PE reads
 - your genome annotation file (.gff/.gff3)
 
-
 ## Usage
 ```
 % python copy_number.py \
@@ -39,7 +38,8 @@ OPTIONS:
 ```
 
 ## Output
-The tool produces a summary output TSV which contains information on the depth of your reference gene, depth of your gene of interest, and the predicted copy number of your gene of interest.
+The main output is a sample.TSV file which has information on the depth of your reference vs query gene, and the predicted copy number of your gene of interest. 
+The copy number is calculated by dividing the average depth of the query gene over the average depth of the reference gene.
 
 ```
 sample	query_gene	query_depth	subject_contig	subject_gene	subject_depth	copy_number
