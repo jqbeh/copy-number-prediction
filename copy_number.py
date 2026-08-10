@@ -9,8 +9,8 @@ python copy_number.py \
     -2 sample_R2.fastq.gz \
     -g sample.gff \
     -o output.tsv \
-    -q rpoB \
-    -s OXA-23
+    -q <single_copy_ref_gene> \
+    -s <your_gene_of_interest>
 
 
 Dependencies:
