@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 
 """
+Python script that takes a genome FASTA, PE reads, and GFF/GFF3 
+annotation file to predict gene copy number. The steps are:
+1. Indexes the FASTA genome using bwa. 
+2. Maps the PE reads with bwa mem to create an indexed BAM file. 
+3. Extracts the CDS feasures from the GFF/GFF3 into a BED-like file.
+4. Checks that BAM and GFF contig names overlap.
+5. Calculates mean read depth with `bedtools coverage` for each CDS.
+6. Compares the read depth for the query vs. reference gene.
+    {Gene copy number = query gene mean depth/reference gene mean depth}
+7. Writes the output into a TSV file.
+
 Usage:
 
 python gene_copy_number.py \
@@ -13,13 +24,13 @@ python gene_copy_number.py \
     -s <gene_name_of_interest>
     -t <number_of_threads>
 
-Also accepts GFF3 input (e.g. -g sample.gff3), including files with an
+Also accepts GFF3 input (e.g., -g sample.gff3), including files with an
 embedded ##FASTA sequence block at the end (as produced by Bakta/Prokka).
 
 Dependencies:
-    bwa
-    samtools
-    bedtools
+    bwa >=0.7.19
+    samtools >=1.23
+    bedtools >=2.31.1
 """
 
 import argparse
