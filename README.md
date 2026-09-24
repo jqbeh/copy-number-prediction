@@ -14,13 +14,6 @@ The tool takes the following as input:
 - your Illumina PE reads
 - your genome annotation file (.gff/.gff3)
 
-project/
-├── copy_number.py
-├── genome.fasta
-├── R1.fastq.gz
-└── R2.fastq.gz
-
-
 ## Usage
 ```
 % python copy_number.py \
