@@ -13,7 +13,6 @@ annotation file to predict gene copy number. The steps are:
 7. Writes the output into a TSV file.
 
 Usage:
-
 python gene_copy_number.py \
     -f sample.fa \
     -1 sample_R1.fastq.gz \
@@ -71,7 +70,6 @@ def get_bam_contigs(bam):
                 if field.startswith("SN:"):
                     contigs.add(field[3:])
     return contigs
-
 
 def get_bed_contigs(bed):
     contigs = set()
@@ -283,7 +281,7 @@ def main():
         subject=args.subject,
         sample=sample)
 
-    print("\nFinished!")
+    print("\nRun finished!")
     print(f"Sample: {sample}")
     print(f"Output: {args.output}")
 
